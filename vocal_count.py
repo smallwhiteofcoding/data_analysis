@@ -20,7 +20,7 @@ def bulid_vocab_counter(data_dir):
     n_data = _count_data(split_dir)
     vocab_counter = Counter()
     for i in range(n_data):
-        js = json.load(open(join(split_dir, '{}.json'.format(i))))
+        js = json.load(open(join(split_dir, '{}.json'.format(i)),encoding="utf-8"))
 
         summary = js['summary']
         summary_text = ' '.join(summary).strip()
